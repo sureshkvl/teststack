@@ -10,7 +10,7 @@ lambda_git_branch: code
 # Aws access to use inside the pipeline
 aws_access_key: ((aws_awskey.access_key))
 aws_secret_key: ((aws_awskey.secret_key))
-aws_default_region: us-east-1
+aws_default_region: us-east-2
 
 # AWS s3 bucket used for lambda release code
 lambda_release_bucket_name: ($ organization_canonical $)-deploy
