@@ -8,8 +8,8 @@ lambda_git_ssh_key: ((git_github_key.ssh_key))
 lambda_git_branch: code
 
 # Aws access to use inside the pipeline
-aws_access_key: ((aws_aws_key.access_key))
-aws_secret_key: ((aws_aws_key.secret_key))
+aws_access_key: ((aws_awskey.access_key))
+aws_secret_key: ((aws_awskey.secret_key))
 aws_default_region: us-east-1
 
 # AWS s3 bucket used for lambda release code
