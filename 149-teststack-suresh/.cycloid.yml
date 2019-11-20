@@ -1,0 +1,15 @@
+name: TestStack-Suresh
+canonical: 149-teststack-suresh
+author: suresh kumar
+description: Test
+type: stack
+image: ""
+keywords:
+- test
+technologies: []
+config:
+  pipeline:
+    pipeline:
+      path: pipeline/terraform-pipeline.yaml
+    variables:
+      path: pipeline/variables.sample.yaml
