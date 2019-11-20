@@ -1,0 +1,15 @@
+name: test2
+canonical: 149-test2
+author: suresh kumar
+description: test2
+type: stack
+image: ""
+keywords:
+- test2
+technologies: []
+config:
+  pipeline:
+    pipeline:
+      path: pipeline/terraform-pipeline.yaml
+    variables:
+      path: pipeline/variables.sample.yaml
