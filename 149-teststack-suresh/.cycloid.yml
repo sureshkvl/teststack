@@ -13,3 +13,7 @@ config:
       path: pipeline/terraform-pipeline.yaml
     variables:
       path: pipeline/variables.sample.yaml
+  terraform:
+    149-teststack-suresh:
+      destination: ($ project $)/terraform/($ environment $)/149-teststack-suresh.tf
+      path: terraform/149-teststack-suresh.tf.sample

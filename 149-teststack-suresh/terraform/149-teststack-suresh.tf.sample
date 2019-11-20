@@ -1,0 +1,6 @@
+module "tf-149-teststack-suresh" {
+  source = "module-149-teststack-suresh"
+
+  # env - type: string
+  # env = "staging"
+}
