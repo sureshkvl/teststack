@@ -18,6 +18,18 @@
   "token" = "123444"
 }
 
+"resource" "aws_instance" "suresh1" {
+  "ami" = "ubuntu"
+
+  "instance_type" = "t2.micro"
+
+  "tags" = {
+    "cycloid.io" = true
+
+    "env" = "${var.env}"
+  }
+}
+
 "variable" "env" {
   "default" = "staging"
 
