@@ -13,3 +13,7 @@ config:
       path: pipeline/terraform-pipeline.yaml
     variables:
       path: pipeline/variables.sample.yaml
+  terraform:
+    149-test2:
+      destination: ($ project $)/terraform/($ environment $)/149-test2.tf
+      path: terraform/149-test2.tf.sample

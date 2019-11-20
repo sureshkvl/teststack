@@ -1,0 +1,6 @@
+module "tf-149-test2" {
+  source = "module-149-test2"
+
+  # env - type: string
+  # env = "staging"
+}
