@@ -1,0 +1,48 @@
+resource_types:
+- name: kubernetes
+  type: docker-image
+  source:
+    repository: zlabjp/kubernetes-resource
+    tag: "1.13"
+
+resources:
+  - name: project-code
+    type: git
+    check_every: 2m
+    source:
+      uri: ((git_repo))
+      branch: ((git_branch))
+      private_key: ((git_ssh_key))
+
+  - name: docker-build
+    type: docker-image
+    source:
+      email: ((docker-hub-email))
+      username: ((docker-hub-username))
+      password: ((docker-hub-password))
+      repository: ((docker-hub-username))/flask-demo
+      tag: ((docker_image_tag))
+  - name: k8s
+    type: kubernetes
+    source:
+      kubeconfig: {{fe_kubeconfig}}
+jobs:
+  - name: dockerbuild
+    serial: true
+    plan:
+      - get: project-code
+        trigger: true
+      - put: docker-build
+        params:
+          build: project-code
+  - name: k8s-deploy
+    plan:
+    - get: project-code
+      trigger: true
+      passed: [dockerbuild]
+    - put: k8s
+      params:
+        kubectl: apply -f project-code/k8s/.
+        wait_until_ready_selector: app=flask
+        wait_until_ready_interval: 10
+        wait_until_ready: 120

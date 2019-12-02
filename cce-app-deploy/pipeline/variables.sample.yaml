@@ -1,0 +1,11 @@
+env: ($ environment $)
+project: ($ project $)
+customer: ($ organization_canonical $)
+git_repo: git@github.com:sureshkvl/flask-project.git
+git_branch: master
+git_ssh_key: ((git_github_key.ssh_key))
+docker-hub-email: ((dockerhub.email))
+docker-hub-username: ((dockerhub.username))
+docker-hub-password: ((dockerhub.password))
+docker_image_tag: ((image.tag))
+fe_kubeconfig: ((cce.kubeconfig))
