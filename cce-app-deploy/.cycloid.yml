@@ -1,6 +1,6 @@
 # Configuration of the CI pipeline
 name: 'CCE-K8S-APP-DEPLOY'
-canonical: 'CCE-K8S-APP-DEPLOY'
+canonical: 150-cce-k8s-deply
 description: 'Demo stack which deploy app in CCE'
 keywords:
   - 'cce'
