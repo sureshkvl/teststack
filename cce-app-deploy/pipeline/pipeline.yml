@@ -31,7 +31,7 @@ resources:
   - name: k8s
     type: kubernetes
     source:
-      kubeconfig: {{fe_kubeconfig}}
+      kubeconfig: ((fe_kubeconfig))
 jobs:
   - name: dockerbuild
     serial: true
