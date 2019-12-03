@@ -7,5 +7,5 @@ git_ssh_key: ((git_github_key.ssh_key))
 docker-hub-email: ((raw_dockerhub.email))
 docker-hub-username: ((raw_dockerhub.username))
 docker-hub-password: ((raw_dockerhub.password))
-docker_image_tag: 1.2
+docker_image_tag: latest
 fe_kubeconfig: ((raw_fe_cce.kubeconfig))
