@@ -1,3 +1,9 @@
+groups:
+  - name: all
+    jobs:
+    - dockerbuild
+    - k8s-deploy
+
 resource_types:
 - name: kubernetes
   type: docker-image
