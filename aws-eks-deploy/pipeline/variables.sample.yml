@@ -1,0 +1,13 @@
+env: ($ environment $)
+project: ($ project $)
+customer: ($ organization_canonical $)
+
+terraform_repo: git@github.com:sureshkvl/concourse-terraform-demo.git
+git_ssh_key: ((git_github_key.ssh_key))
+
+# Aws access to use inside the pipeline
+aws_access_key: ((aws_awskey.access_key))
+aws_secret_key: ((aws_awskey.secret_key))
+aws_default_region: us-east-2
+terraform_storage_bucket_name: terraform-backend-concourse
+terraform_storage_bucket_path: terraform-states

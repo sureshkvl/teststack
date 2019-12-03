@@ -1,0 +1,21 @@
+# Configuration of the CI pipeline
+name: 'AWS-EKS-DEPLOY'
+canonical: aws-eks-deply
+description: 'Demo stack which deploy eks in aws'
+keywords:
+  - 'aws'
+  - 'eks'
+  - 'demo'
+technologies:
+  - technology: Kubernetes
+    version: n/a
+author: 'Cycloid'
+image: 'https://raw.githubusercontent.com/cycloid-community-catalog/docs-step-by-step-stack/stacks/icon.png'
+type: 'stack'
+config:
+  # Configuration of the CI pipeline
+  pipeline:
+    pipeline:
+      path: 'pipeline/pipeline.yml'
+    variables:
+      path: 'pipeline/variables.sample.yml'
