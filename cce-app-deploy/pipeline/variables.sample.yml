@@ -2,7 +2,7 @@ env: ($ environment $)
 project: ($ project $)
 customer: ($ organization_canonical $)
 git_repo: git@github.com:sureshkvl/flask-project.git
-git_branch: master
+git_branch: alpine
 git_ssh_key: ((git_github_key.ssh_key))
 docker-hub-email: ((raw_dockerhub.email))
 docker-hub-username: ((raw_dockerhub.username))
